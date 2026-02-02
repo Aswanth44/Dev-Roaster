@@ -85,3 +85,7 @@ button:hover {
   color: #ffaa00;
 }
 
+.cursor::after {
+  content: "▌";
+  animation: blink 1s infinite;
+}
