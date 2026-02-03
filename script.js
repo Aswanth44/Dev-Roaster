@@ -55,11 +55,9 @@ btn.addEventListener("click", () => {
     response.textContent = "Bold of you to click that.";
   } else if (clickCount === 2) {
     response.textContent = "You clicked again. Interesting.";
-  } else if {
-    response.textContent = "Okay. Now you’re just testing me.";
   } else {
-    response.textContent="Lets Begin, But I didnt finish the work";
-  }
+    response.textContent = "Okay. Now you’re just testing me.";
+  } 
 
   terminal.appendChild(response);
 });
