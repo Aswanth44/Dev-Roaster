@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DevRoaster Terminal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="crashOverlay" class="crash-overlay hidden">
+    <div class="warning-box">
+      <h1>⚠ SYSTEM FAILURE ⚠</h1>
+      <p>Critical Machine Halt</p>
+      <p>Type 'recover' to reboot</p>
+    </div>
+  </div>
+
+  <main class="terminal">
+
+    <header class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title">DevRoaster Terminal</span>
+    </header>
+
+    <section class="terminal-body">
+      <div id="chatArea"></div>
+
+      <div class="input-line" id="inputContainer">
+        <span>&gt;</span>
+        <input 
+          type="text" 
+          id="userInput" 
+          placeholder="type 'help'..."
+          autocomplete="off"
+        />
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

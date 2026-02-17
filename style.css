@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+}
+
+body {
+  background: #0d0d0d;
+  color: #00ff9c;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+  width: 90%;
+  max-width: 700px;
+  background: #111;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,255,156,0.2);
+}
+
+.terminal-header {
+  background: #1a1a1a;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.title {
+  margin-left: auto;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.terminal-body {
+  padding: 20px;
+}
+
+#chatArea {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.line { margin-bottom: 6px; }
+.warning { color: #ff4d4d; }
+.success { color: #00ff9c; }
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.input-line span {
+  margin-right: 8px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ff9c;
+  font-family: inherit;
+  width: 100%;
+}
+
+.crash-overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: flashBg 0.6s infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+.warning-box {
+  text-align: center;
+  color: red;
+  font-size: 3rem;
+  animation: shake 0.3s infinite;
+}
+
+@keyframes flashBg {
+  0% { background: black; }
+  50% { background: #220000; }
+  100% { background: black; }
+}
+
+@keyframes shake {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(-5px, 3px); }
+  50% { transform: translate(5px, -3px); }
+  75% { transform: translate(-4px, 2px); }
+  100% { transform: translate(0,0); }
+}
+
+.crash-mode #inputContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  padding: 10px;
+  border: 1px solid red;
+  z-index: 10000;
+}
